@@ -7,7 +7,8 @@
         [compojure.handler :only [site]]
         [ring.util.response :only [redirect]])
   (:require [compojure.route :as route]
-            [compojure.handler :as handler]))
+            [compojure.handler :as handler])
+  (:gen-class))
 
 (defn start [] nil)
 (defn stop [] nil)

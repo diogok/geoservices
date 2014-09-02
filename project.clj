@@ -3,7 +3,7 @@
   :url "http://github.com/diogok/simple-spatial-services"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :main flora-connect.server
+  :main geoservices.server
   :ring { :handler geoservices.server/app
           :init geoservices.server/start
           :destroy geoservices.server/stop
@@ -15,7 +15,8 @@
                  [org.clojure/data.json "0.2.5"]
                  [clj-http "0.9.0"]
                  [diogok/cljts "0.4.1"]]
-  :profiles {:dev {:dependencies [[midje "1.6.3"]]
+  :profiles {:uberjar {:aot :all}
+             :dev {:dependencies [[midje "1.6.3"]]
                    :plugins [[lein-ring "0.8.11"]
                              [lein-midje "3.1.3"]]}}
   )
