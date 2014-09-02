@@ -1,0 +1,19 @@
+{
+    "apiVersion":"v1",
+    "swaggerVersion":"1.2",
+    "info":{
+        "title":"Geospatial Services",
+        "description":"Geospatial funcions as a service.<br /><br />",
+        "contact":"diogo@diogok.net"
+    },
+    "apis":[
+        {
+            "path":"transform.json",
+            "description":"Reprojection."
+        },
+        {
+            "path":"analysis.json",
+            "description":"Buffer, Convex-Hull, area."
+        }
+    ]
+}

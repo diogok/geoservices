@@ -1,6 +1,7 @@
 (ns geoservices.server
   (:use ring.adapter.jetty
         geoservices.web-wrap
+        geoservices.api
         [compojure.core :only [defroutes GET POST context]]
         [compojure.route :only [resources]]
         [compojure.handler :only [site]]
@@ -16,10 +17,8 @@
   (GET "/" []
     (redirect "/index.html"))
 
-  (context "/api/v1" [] 
-    (GET "/foo" []
-      "bar")
-         )
+  (context "/api" []
+    (context "/v1" [] api-v1-routes))
 
   (resources "/"))
 

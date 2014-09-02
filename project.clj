@@ -13,6 +13,7 @@
                  [ring "1.3.0"]
                  [ring/ring-jetty-adapter "1.3.0"]
                  [org.clojure/data.json "0.2.5"]
+                 [clj-http "0.9.0"]
                  [diogok/cljts "0.4.1"]]
   :profiles {:dev {:dependencies [[midje "1.6.3"]]
                    :plugins [[lein-ring "0.8.11"]

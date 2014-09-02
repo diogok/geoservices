@@ -1,0 +1,119 @@
+{
+  "apiVersion":"v1",
+  "swaggerVersion":"1.2",
+  "resourcePath":"analysis",
+  "produces":["application/json"],
+  "models":{},
+  "apis": [
+    {
+      "path":"analysis/buffer",
+      "operations":[
+          {
+              "method":"POST",
+              "summary":"Buffer your feature.",
+              "nickname":"buffer",
+              "parameters":[
+                  {
+                      "name":"body",
+                      "description":"Raw data.",
+                      "required":true,
+                      "type":"string",
+                      "paramType":"body"
+                  },
+                  {
+                      "name":"value",
+                      "description":"Value (in degrees) to buffer",
+                      "required":true,
+                      "type":"number",
+                      "paramType":"query"
+                  }
+              ]
+          }
+      ]
+    },
+    {
+      "path":"analysis/buffer_in_meters",
+      "operations":[
+          {
+              "method":"POST",
+              "summary":"Buffer your feature in meters.",
+              "nickname":"buffer_in_meters",
+              "parameters":[
+                  {
+                      "name":"body",
+                      "description":"Raw data.",
+                      "required":true,
+                      "type":"string",
+                      "paramType":"body"
+                  },
+                  {
+                      "name":"value",
+                      "description":"Value (in meters) to buffer",
+                      "required":true,
+                      "type":"number",
+                      "paramType":"query"
+                  }
+              ]
+          }
+      ]
+    },
+    {
+      "path":"analysis/area",
+      "operations":[
+          {
+              "method":"POST",
+              "summary":"Area of your feature.",
+              "nickname":"area",
+              "parameters":[
+                  {
+                      "name":"body",
+                      "description":"Raw data.",
+                      "required":true,
+                      "type":"string",
+                      "paramType":"body"
+                  }
+              ]
+          }
+      ]
+    },
+    {
+      "path":"analysis/area_in_meters",
+      "operations":[
+          {
+              "method":"POST",
+              "summary":"Area of your feature in meters.",
+              "nickname":"area_in_meters",
+              "parameters":[
+                  {
+                      "name":"body",
+                      "description":"Raw data.",
+                      "required":true,
+                      "type":"string",
+                      "paramType":"body"
+                  }
+              ]
+          }
+      ]
+    },
+    {
+      "path":"analysis/union",
+      "operations":[
+          {
+              "method":"POST",
+              "summary":"Union of a feature collection.",
+              "nickname":"union",
+              "parameters":[
+                  {
+                      "name":"body",
+                      "description":"Raw data.",
+                      "required":true,
+                      "type":"string",
+                      "paramType":"body"
+                  }
+              ]
+          }
+      ]
+    }
+  ]
+}
+

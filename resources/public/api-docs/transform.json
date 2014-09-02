@@ -1,0 +1,42 @@
+{
+    "apiVersion":"v1",
+    "swaggerVersion":"1.2",
+    "resourcePath":"transform",
+    "produces":["application/json"],
+    "models":{},
+    "apis": [
+        {
+            "path":"transform/reproject",
+            "operations":[
+                {
+                    "method":"POST",
+                    "summary":"Convert between CRSs.",
+                    "nickname":"convert",
+                    "parameters":[
+                        {
+                            "name":"body",
+                            "description":"Raw data to convert.",
+                            "required":true,
+                            "type":"string",
+                            "paramType":"body"
+                        },
+                        {
+                            "name":"from",
+                            "description":"Original CRS(ex.: ESPG:4326).",
+                            "required":true,
+                            "type":"string",
+                            "paramType":"query"
+                        },
+                        {
+                            "name":"to",
+                            "description":"CRS to convert into.",
+                            "required":true,
+                            "type":"string",
+                            "paramType":"query"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
