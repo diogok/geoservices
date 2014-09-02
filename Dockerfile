@@ -6,5 +6,5 @@ EXPOSE 8080
 
 ADD target/geoservices-0.0.1-standalone.war /root/geoservices.war
 
-CMD ["java" "-server" "-jar" "/root/jetty.jar" "/root/geoservices.war"]
+CMD ["/usr/bin/java", "-server" ,"-jar", "/root/jetty.jar" ,"/root/geoservices.war"]
 
