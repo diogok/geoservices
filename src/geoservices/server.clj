@@ -35,6 +35,6 @@
   ""
   [& args]
   (start)
-  (run-jetty app {:port 3000 :join? true})
+  (run-jetty app {:port (Integer/parseInt (or (System/getProperty "PORT") (System/getenv "PORT") "9191") ) :join? true})
   (stop))
 
