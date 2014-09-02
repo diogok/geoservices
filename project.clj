@@ -1,8 +1,7 @@
 (defproject geoservices "0.0.1"
   :description "Simple Spatial Services, apply JTS over GEOJSON"
   :url "http://github.com/diogok/simple-spatial-services"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :license {:name "MIT"}
   :main geoservices.server
   :ring { :handler geoservices.server/app
           :init geoservices.server/start
